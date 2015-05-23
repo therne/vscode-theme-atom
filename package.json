@@ -5,7 +5,7 @@
   "version": "0.1.0",
   "description": "Visual Studio Code Theme for Atom Editor",
   "license": "MIT",
-  "repository": "https://github.com/retail3210/vscode-theme-atom",
+  "repository": "https://github.com/therne/vscode-theme-atom",
   "engines": {
     "atom": ">=0.200.0"
   }
