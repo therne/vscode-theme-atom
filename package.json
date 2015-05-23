@@ -1,0 +1,16 @@
+{
+  "name": "Visual Studio Code",
+  "author": "retail3210",
+  "theme": "ui",
+  "version": "0.1.0",
+  "description": "Visual Studio Code Theme for Atom Editor",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/retail3210/vscode-theme-atom"
+  },
+  "engines": {
+    "atom": ">0.50.0"
+  },
+  "homepage": "https://github.com/retail3210/vscode-theme-atom"
+}

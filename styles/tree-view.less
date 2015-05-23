@@ -1,0 +1,114 @@
+@import "ui-variables";
+
+.tree-view {
+  font-size: @font-size+2;
+  // letter-spacing: -0.002em;
+  font-family: 'Helvetica Neue';
+  font-weight: 200;
+  background: @tree-view-background-color;
+
+  .selected:before {
+    background: #3f3f46;
+  }
+
+  .list-item {
+    height: 25px;
+  }
+}
+
+.tree-view-resizer {
+  .tree-view-resize-handle {
+    width: 8px;
+  }
+}
+
+.list-tree.has-collapsable-children .list-nested-item > .list-tree > li {
+  padding-left: 17px;
+}
+
+.list-tree.has-collapsable-children .list-nested-item > .list-tree > .list-nested-item {
+  padding-left: 14px;
+}
+
+.list-tree li.list-nested-item > .list-item {
+  font-weight: 200;
+}
+
+.list-tree li.list-nested-item.selected > .list-item {
+  font-weight: 200;
+}
+
+.project-root > .list-item > span {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: @font-size;
+  text-shadow: none;
+}
+
+.project-root > .list-item > span:before {
+  display: none;
+}
+
+
+.list-tree.has-collapsable-children .list-nested-item > .list-item::before {
+  background-image: url('atom://modern-flat/images/arrow-expand-dark.svg');
+  color: #d4d4d4;
+  top: 4px;
+  width: 16px;
+  height: 16px;
+  margin-right: 2px;
+  left: -2px;
+  content: "";
+}
+
+
+.list-tree.has-collapsable-children .list-nested-item.collapsed > .list-item::before {
+  background-image: url('atom://modern-flat/images/arrow-collapse-dark.svg');
+  color: #d4d4d4;
+  top: 4px;
+  width: 16px;
+  height: 16px;
+  margin-right: 2px;
+  left: -2px;
+  content: "";
+}
+
+.list-tree li:not(.list-nested-item).selected {
+  text-shadow: none;
+  font-family: 'Helvetica Neue';
+  font-weight: 200;
+}
+
+.list-tree li:not(.list-nested-item) {
+  font-family: 'Helvetica Neue';
+  font-weight: 200;
+}
+
+.focusable-panel {
+  opacity: 1;
+  background: #252526;
+  // border-right: 1px solid @tool-panel-border-color;
+  // box-shadow: inset -3px 0 0 rgba(0,0,0, .05);
+
+  &:focus {
+    // background: #282828;
+
+    .selected:before {
+      background: #063655;
+    }
+
+    .selected > .name,
+    .selected > .name:before,
+    .selected > .list-item > .name,
+    .selected > .list-item > .name:before {
+      color: #fff !important;
+    }
+  }
+}
+
+[data-show-on-right-side=true] {
+  .tree-view .selected:before,
+  .focusable-panel {
+    box-shadow: inset 3px 0 0 rgba(0,0,0, .05);
+  }
+}
